@@ -1,0 +1,24 @@
+{
+  "name": "uk-europoselok",
+  "version": "1.0.0",
+  "authors": [
+    "Sokolov Andrey <navigatex@ya.ru>"
+  ],
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "homepage": "uk-europoselok.ru",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "normalize.css": "~3.0.3",
+    "bootstrap": "~3.3.4"
+  }
+}
