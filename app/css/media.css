@@ -1,0 +1,10 @@
+@media (min-width: 992px) {
+	.services-menu .list-group {
+		width: 227px;
+	}	
+}
+@media (min-width: 1200px) {
+	.services-menu .list-group {
+		width: 360px;
+	}	
+}

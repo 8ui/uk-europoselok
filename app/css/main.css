@@ -1,0 +1,77 @@
+body {
+	font-size: 16px;
+	font-family: 'Cuprum', sans-serif;
+	position: relative;
+}
+h1, h2, h3, h4, h5 {
+	font-family: 'Philosopher', sans-serif;
+}
+header {
+	box-shadow: 0 0 4px rgba(0,0,0,0.7);
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 9;
+	background-color: #fff;
+}
+header .nav {
+	float: right;
+	margin-top: 20px;
+}
+header .nav a {
+	font-size: 18px;
+	color: #777777;
+}
+header .nav a:hover,
+header .nav a:active,
+header .nav a:focus {
+	color: #337ab7;
+	background-color: transparent;
+}
+
+.logo {
+	cursor: default;
+	padding: 5px 0 0 94px;
+	background: url("../img/logo.png") no-repeat 0 0;
+	color: #0b763e;
+	font-size: 36px;
+	height: 71px;
+	float: left;
+	margin: 10px 0;
+}
+.logo span {
+	display: block;
+	font-size: 16px;
+	font-weight: normal;
+}
+
+#content {
+	padding: 110px 0 0 0;
+}
+#services li {
+	padding: 0 0 5px;
+}
+#services li p {
+	color: #888;
+	font-size: 14px;
+}
+
+.services-menu {
+	position: relative;
+}
+.services-menu .list-group {
+	position: fixed;
+	top: 129px;
+}
+.angular-google-map-container { 
+	height: 500px; 
+}
+
+#contacts {
+	padding-top: 100px;
+}
+footer {
+	background-color: #eee;
+	height: 60px;
+}
