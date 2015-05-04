@@ -1,77 +1,99 @@
 body {
-	font-size: 16px;
-	font-family: 'Cuprum', sans-serif;
-	position: relative;
+    font-size: 16px;
+    font-family: Cuprum, sans-serif;
+    position: relative
 }
-h1, h2, h3, h4, h5 {
-	font-family: 'Philosopher', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: Philosopher, sans-serif
 }
-header {
-	box-shadow: 0 0 4px rgba(0,0,0,0.7);
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	z-index: 9;
-	background-color: #fff;
+body>header {
+    box-shadow: 0 0 4px rgba(0, 0, 0, .7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9;
+    background-color: #fff
 }
-header .nav {
-	float: right;
-	margin-top: 20px;
+body>header .nav {
+    float: right;
+    margin-top: 20px
 }
-header .nav a {
-	font-size: 18px;
-	color: #777777;
+body>header .nav a {
+    font-size: 18px;
+    color: #777
 }
-header .nav a:hover,
-header .nav a:active,
-header .nav a:focus {
-	color: #337ab7;
-	background-color: transparent;
+body>header .nav a:active,
+body>header .nav a:focus,
+body>header .nav a:hover {
+    color: #337ab7;
+    background-color: transparent
 }
-
 .logo {
-	cursor: default;
-	padding: 5px 0 0 94px;
-	background: url("../img/logo.png") no-repeat 0 0;
-	color: #0b763e;
-	font-size: 36px;
-	height: 71px;
-	float: left;
-	margin: 10px 0;
+    cursor: default;
+    padding: 5px 0 0 94px;
+    background: url(../img/logo.png)no-repeat;
+    color: #0b763e;
+    font-size: 36px;
+    height: 71px;
+    float: left;
+    margin: 10px 0
 }
 .logo span {
-	display: block;
-	font-size: 16px;
-	font-weight: normal;
+    display: block;
+    font-size: 16px;
+    font-weight: 400
 }
-
 #content {
-	padding: 110px 0 0 0;
+    padding: 110px 0 0
 }
 #services li {
-	padding: 0 0 5px;
+    padding: 0 0 5px
 }
 #services li p {
-	color: #888;
-	font-size: 14px;
+    color: #888;
+    font-size: 14px
 }
-
 .services-menu {
-	position: relative;
+    position: relative
 }
 .services-menu .list-group {
-	position: fixed;
-	top: 129px;
+    position: fixed;
+    top: 129px;
+    -webkit-transition: opacity .4s ease-in-out;
+    -moz-transition: opacity .4s ease-in-out;
+    -o-transition: opacity .4s ease-in-out;
+    -ms-transition: opacity .4s ease-in-out;
+    transition: opacity .4s ease-in-out
 }
-.angular-google-map-container { 
-	height: 500px; 
+.services-menu .list-group.active {
+    opacity: 0
 }
-
+.services-menu .list-group .H2 {
+    font-weight: 700
+}
+.services-menu .list-group .H3 {
+    padding-left: 25px
+}
 #contacts {
-	padding-top: 100px;
+    padding-top: 100px
 }
-footer {
-	background-color: #eee;
-	height: 60px;
+body>footer {
+    padding-top: 19px;
+    background-color: #eee;
+    height: 60px
+}
+.dg-firm-card__address a {
+    background-position: center bottom;
+    background-size: 10px 1px;
+    background-repeat: repeat-x;
+    text-decoration: none;
+    background-image: -webkit-linear-gradient(left, rgba(255, 230, 170, .3), rgba(255, 230, 170, .3) 100%);
+    background-image: linear-gradient(to right, rgba(255, 230, 170, .3), rgba(255, 230, 170, .3) 100%);
+    color: #ffe6aa;
+    font-size: 13px
 }

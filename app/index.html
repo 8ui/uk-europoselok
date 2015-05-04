@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="UKApp">
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<title>Управляющая компания «Маленькая страна»</title>
 	<link href='http://fonts.googleapis.com/css?family=Philosopher:700|Cuprum:400,400italic,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
-	<script src='//maps.googleapis.com/maps/api/js?sensor=false'></script>
+	<script src="http://maps.api.2gis.ru/2.0/loader.js?pkg=full" data-id="dgLoader"></script>
 
 	<!-- CSS -->
 	<!-- build:css css/vendor.css -->
@@ -23,27 +23,23 @@
 	<!-- build:js js/vendor.js -->
 	<!-- bower:js -->
 	<script src="bower_components/jquery/dist/jquery.js"></script>
-	<script src="bower_components/angular/angular.js"></script>
 	<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-	<script src="bower_components/lodash/dist/lodash.compat.js"></script>
-	<script src="bower_components/angular-google-maps/dist/angular-google-maps.js"></script>
 	<!-- endbower -->
 	<!-- endbuild -->
 	<!-- build:js js/main.js -->
-	<script src="js/controller.js"></script>
 	<script src="js/main.js"></script>
 	<!-- endbuild -->	
 
 </head>
-<body ng-controller="main">
+<body>
 
 	<header>
 		<div class="container">
 			<h1 class="logo">Маленькая страна<span>управляющая компания</span></h1>
 
 			<ul class="nav navbar-nav">
-				<li><a href="#">Контакты</a></li>
-				<li><a href="#">Обратный звонок</a></li>
+				<li><a href="#" class="link-contacts">Контакты</a></li>
+				<li><a href="#" class="ask-question">Задать вопрос</a></li>
 			</ul>
 
 		</div>
@@ -53,23 +49,16 @@
 			
 			<div class="row">
 
-				<div class="col-md-8" class="services">
+				<div class="col-md-8" id="services">
 					
-					<div ng-include="templates.services.url" scope="" onload="" id="services">
+					<div>
 						
 					</div>
 				</div>
 				
 				<div class="col-xs-4 hidden-xs hidden-sm services-menu">
 					
-					<div class="list-group">
-						<a href="#" class="list-group-item"><b>Оказание платных услуг населению «Служба садовников»</b></a>
-						<a href="#" class="list-group-item">Уход и обслуживание</a>
-						<a href="#" class="list-group-item">Работы по благоустройству и озеленению по готовому ландшафтному проекту</a>
-						<a href="#" class="list-group-item">Ландшафтный дизайн. Ландшафтное проектирование.</a>
-						<a href="#" class="list-group-item"><b>Вывоз строительного мусора</b></a>
-					</div>
-
+					<div class="list-group nav"></div>
 				</div>
 
 			</div>
@@ -83,16 +72,46 @@
 				<h1>Контакты</h1>
 			</div>
 
-			<ui-gmap-google-map options="map.options" center='map.center' zoom='map.zoom'>
-
-				<ui-gmap-marker coords='marker.coords' idkey="marker.id"></ui-gmap-marker>
-			</ui-gmap-google-map>
-
+			<div id="map" style="height:600px"></div>
 		</div>
 	</div>
 	<footer>
 		<div class="text-center"><a href="mailto:webdeveloper@my.com" class="creator">Создание сайта</a></div>
 	</footer>
+
+
+	<div class="modal fade" id="ask-question">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title">Задать вопрос</h4>
+				</div>
+				<div class="modal-body">
+
+					<form action="" method="POST" role="form">
+
+						<div class="form-group">
+							<label for="name">Имя</label>
+							<input type="text" name="name" class="form-control" id="name">
+						</div>
+
+						<div class="form-group">
+							<label for="question">Вопрос</label>
+							<textarea name="question" id="question" rows="5" class="form-control"></textarea>
+						</div>
+
+					</form>
+
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Отмена</button>
+					<button type="button" class="btn btn-primary">Отправить</button>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+
 
 </body>
 </html>
